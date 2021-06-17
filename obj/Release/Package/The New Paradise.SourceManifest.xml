@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\palaa\Downloads\NetFramewokMVCProject-master (1)\.NetFramewokMVCProject-master\obj\Release\Package\PackageTmp" />
+  <setAcl path="C:\Users\palaa\Downloads\NetFramewokMVCProject-master (1)\.NetFramewokMVCProject-master\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\palaa\Downloads\NetFramewokMVCProject-master (1)\.NetFramewokMVCProject-master\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

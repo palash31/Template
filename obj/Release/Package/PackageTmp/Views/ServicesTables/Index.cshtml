@@ -1,0 +1,41 @@
+﻿@model IEnumerable<The_New_Paradise.Models.ServicesTable>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>OUR SERVICES</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <div class="card" style="width: 20rem; background-color:lightblue;text-align:left;color:darkgreen; font-family:Calibri">
+                    <img src="https://www.menshairstylestoday.com/wp-content/uploads/2020/07/How-Much-Do-Barbers-Make.jpg" style="height:200px; width:200px;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <b>@Html.DisplayFor(modelItem => item.Service_Namee)</b><br />
+                        <b>@Html.DisplayFor(modelItem => item.Service_Price)</b><br />
+                        <b>@Html.DisplayFor(modelItem => item.Service_Time)</b><br />
+                        <b><hr class="dropdown-divider"></b>
+                        <b> @Html.DisplayFor(modelItem => item.Service_Description)</b><br />
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary">ADD TO CART</a>
+                    </div>
+                </div>
+
+               
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Service_ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Service_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Service_ID })
+            </td>
+        </tr>
+    }
+

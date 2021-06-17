@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjectHeavenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AdminTable">
+    <Key>
+      <PropertyRef Name="Admin_ID" />
+    </Key>
+    <Property Name="Admin_ID" Type="int" Nullable="false" />
+    <Property Name="Admin_Name" Type="nvarchar" MaxLength="70" Nullable="false" />
+    <Property Name="Admin_Phone" Type="nvarchar" MaxLength="10" />
+    <Property Name="Admin_Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Admin_Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Admin_Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Customer_ID" />
+    </Key>
+    <Property Name="Customer_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Customer_Name" Type="nvarchar" MaxLength="70" Nullable="false" />
+    <Property Name="Customer_Gender" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Customer_Phone" Type="nvarchar" MaxLength="10" />
+    <Property Name="Customer_Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Customer_Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Customer_Password" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Employee_ID" />
+    </Key>
+    <Property Name="Employee_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Employee_Name" Type="nvarchar" MaxLength="70" Nullable="false" />
+    <Property Name="Employee_Phone" Type="nvarchar" MaxLength="10" />
+    <Property Name="Employee_Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Employee_Salary" Type="float" Nullable="false" />
+    <Property Name="Employee_Experience" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServicesTable">
+    <Key>
+      <PropertyRef Name="Service_ID" />
+    </Key>
+    <Property Name="Service_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Service_Namee" Type="nvarchar" MaxLength="70" Nullable="false" />
+    <Property Name="Service_Price" Type="float" Nullable="false" />
+    <Property Name="Service_Time" Type="int" Nullable="false" />
+    <Property Name="Service_Description" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ProjectHeavenModelStoreContainer">
+    <EntitySet Name="AdminTable" EntityType="Self.AdminTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServicesTable" EntityType="Self.ServicesTable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
